@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #d62828, #f77f00, #fcbf49);
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+}
+
+.calculator > button {
+  border: none;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+.calculator > button:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+  transition: 0.55s;
+}
+
+.space2 {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 10px;
+  word-break: break-all;
+}
+
+.output > .previous {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output > .current {
+  color: rgba(255, 255, 255, 1);
+  font-size: 2.5rem;
+  line-height: 1;
+}
